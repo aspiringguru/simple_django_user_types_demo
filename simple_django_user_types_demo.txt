@@ -1,0 +1,44 @@
+https://simpleisbetterthancomplex.com/tutorial/2018/01/18/how-to-implement-multiple-user-types-with-django.html#practical-example
+
+https://github.com/sibtc/django-multiple-user-types-example
+
+
+G:\2020_working\coding\simpleDjangoUserTypes
+
+cd /mnt/g/2020_working/coding/simpleDjangoUserTypes
+
+conda deactivate
+deactivate
+python3 -m venv venv
+source venv/bin/activate
+
+#check venv activated
+pip install django==2.2.9
+
+vim .gitignore
+#-------------------------------------------------------------------------------
+venv/
+*/__pycache__/
+*.pyc
+#-------------------------------------------------------------------------------
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/aspiringguru/simple_django_user_types_demo.git
+git push -u origin master
+#-------------------------------------------------------------------------------
+python -m django --version
+which django-admin
+django-admin --version
+#-------------------------------------------------------------------------------
+django-admin startproject django_school
+cd django_school
+#-------------------------------------------------------------------------------
+python3 manage.py startapp classroom
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
+#-------------------------------------------------------------------------------
+http://localhost:8000/
+#loads the default page "The install worked successfully! Congratulations!"
+#-------------------------------------------------------------------------------
