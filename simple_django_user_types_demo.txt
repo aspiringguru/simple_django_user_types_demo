@@ -42,3 +42,11 @@ python3 manage.py runserver
 http://localhost:8000/
 #loads the default page "The install worked successfully! Congratulations!"
 #-------------------------------------------------------------------------------
+
+git clone https://github.com/sibtc/django-multiple-user-types-example.git temp
+#mv contents of  django_school
+pip install -r requirements.txt
+cd django_school
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
